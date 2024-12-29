@@ -4,162 +4,402 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Arunit Baidya</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-color: #f8f8f8;
             color: #333;
+            line-height: 1.6;
         }
+
         header {
-            background-color: #4CAF50;
+            background-color: #333;
             color: white;
-            padding: 2rem 0;
+            padding: 5rem 0;
             text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
         }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
         nav {
             display: flex;
             justify-content: center;
-            background: #2E7D32;
+            position: sticky;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 100;
             padding: 1rem 0;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
+
         nav a {
             color: white;
             text-decoration: none;
             margin: 0 1rem;
             font-weight: bold;
+            font-size: 1rem;
+            transition: color 0.3s;
         }
+
         nav a:hover {
-            text-decoration: underline;
+            color: #4CAF50;
         }
+
         main {
-            padding: 2rem;
+            padding: 3rem 2rem;
             max-width: 900px;
             margin: auto;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
         }
+
         section {
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
         }
+
         h2 {
+            color: #333;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            text-align: center; /* Added this line to center the headings */
+
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .skill-box {
+            background-color: #fff;
+            border-radius: 12px;
+            width: 300px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            flex: 1 1 calc((100% / 3) - 2rem); /* Divide container into 3 columns */
+            max-width: calc((100% / 3) - 2rem); /* Prevent boxes from exceeding 3 in a row */
+            box-sizing: border-box; /* Ensures padding doesn't affect box width */
+            min-width: 284px; /* Set a minimum width for larger boxes */
+        }
+
+        .contact-box {
+            background-color: #fff;
+            border-radius: 12px;
+            width: 500px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            flex: 1 1 calc((100% / 3) - 2rem); /* Divide container into 3 columns */
+            max-width: calc((100% / 3) - 2rem); /* Prevent boxes from exceeding 3 in a row */
+            box-sizing: border-box; /* Ensures padding doesn't affect box width */
+            min-width: 350px; /* Set a minimum width for larger boxes */
+        }
+
+        .skill-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .skill-box h3 {
             color: #4CAF50;
+            font-size: 1.3rem;
             margin-bottom: 1rem;
         }
-        ul {
-            list-style-type: disc;
-            padding-left: 1.5rem;
+
+        .panel {
+            background-color: #fff;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        ul li strong {
-            font-weight: bold;
+
+        .panel:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
         }
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-            background: #333;
-            color: white;
-            margin-top: 2rem;
-        }
-        a.download {
-            display: inline-block;
-            padding: 0.5rem 1rem;
+
+        .panel-header {
             background-color: #4CAF50;
             color: white;
-            text-decoration: none;
-            border-radius: 5px;
+            padding: 1.5rem;
+            font-size: 1.1rem;
             font-weight: bold;
-            transition: background-color 0.3s ease;
+            text-align: center;
+            border-radius: 12px 12px 0 0;
         }
+
+        .panel-body {
+            padding: 1.5rem;
+            font-size: 1.1rem;
+            color: #555;
+            text-align: left;
+            line-height: 1.4; /* Reduced line height */
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            background: #333;
+            color: white;
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        a.download {
+            display: inline-block;
+            padding: 0.7rem 1.2rem;
+            background-color: #003366;
+            color: white; /* Change this to your desired font color */
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 2rem;
+            transition: background-color 0.3s;
+        }
+
         a.download:hover {
-            background-color: #45a049;
+            background-color: #003366;
+        }
+
+
+        /* Contact Section Styles */
+        .contact-box {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .content {
+            margin-bottom: 1.5rem;
+        }
+
+        .content a {
+            color: #4CAF50;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .content a:hover {
+            color: #45a049;
+        }
+
+        .fa {
+            margin-right: 10px;
+            color: #4CAF50;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .fa:hover {
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 1rem;
+            justify-content: center; /* Center-align the social links horizontally */
+            align-items: center; /* Vertically center-align items */
+            flex-wrap: wrap; /* Ensure icons don't overflow in case of long content */
+            text-align: center; /* Center-align text */
+        }
+
+        /*.social-links .fab {*/
+        /*    font-size: 1.0rem; !* Match this to the other icons' size *!*/
+        /*}*/
+
+        .social-links a {
+            color: #4CAF50;
+            font-size: 1.0rem;
+            transition: color 0.3s ease;
+    text-decoration: none; /* Add this line to remove the underline */
+
+            display: inline-flex;
+            align-items: center;
+            gap: 10px; /* Adjust spacing between the icon and the text */
+        }
+
+        .social-links .fab {
+            font-size: 1.5rem; /* Adjust this value to increase or decrease the icon size */
+        }
+
+        .social-links a:hover {
+            color: #45a049;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Hello, I'm Arunit Baidya</h1>
-        <p>Aspiring Distributed Systems Software Engineer</p>
-    </header>
-    <nav>
-        <a href="#about">About Me</a>
-        <a href="#academics">Academics</a>
-        <a href="#skills">Skills</a>
-        <a href="#work">Work Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I am currently a student at Northeastern University with a passion for distributed systems and software engineering. I bring professional experience from my time as a Software Engineer at Arcesium, where I optimized workflows by up to 40% and reduced compute resource usage significantly. I am excited to leverage my technical expertise in backend engineering roles.</p>
-            <p>My graduate studies focus on distributed software systems implementation, with a keen interest in concurrency, parallelism, and distributed design patterns. I am driven by a commitment to solving complex challenges and making impactful contributions through technology.</p>
-        </section>
-        <section id="academics">
-            <h2>Academics</h2>
-            <ul>
-                <li><strong>Northeastern University (Boston, MA):</strong> Master of Science in Computer Science (Fall 2024 - Fall 2026)</li>
-                <li><strong>PSG College of Technology (Coimbatore, India):</strong> Bachelor of Engineering in Computer Science and Engineering (2018 - 2022)</li>
-            </ul>
-        </section>
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li><strong>Low-Level Development:</strong> GDB, Valgrind</li>
-                <li><strong>Data Engineering:</strong> SQL, Spark, Delta Lake, Data Modeling</li>
-                <li><strong>Programming Languages & Backend:</strong> Python, Java, Scala, C, C++, Go, API Development</li>
-                <li><strong>Orchestration / Dev Tools:</strong> Kubernetes, Argo Workflow, Docker, AWS S3, AWS SNS, AWS SQS, Git</li>
-                <li><strong>Software Engineering:</strong> Continuous Integration & Deployment, Agile Development, Test Driven Development, Code Reviews</li>
-                <li><strong>Collaboration:</strong> Excellent communication skills, cross-functional collaboration, context-driven and domain knowledge interest</li>
-            </ul>
-        </section>
-        <section id="work">
-            <h2>Work Experience</h2>
-            <ul>
-                <li><strong>Arcesium</strong>
-                    <ul>
-                        <li>Software Engineer (July 2022 to July 2024)</li>
-                        <li>Software Engineering Intern (February 2022 - June 2022)</li>
-                        <li>Software Engineer Intern (May 2021 - July 2021)</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li><strong>Image Processing Application (Course Project):</strong> October 2024 – November 2024, Boston
-                    <ul>
-                        <li>Developed an image processing application in Java that accepts terminal or script file commands to perform image transformations.</li>
-                        <li>Applied SOLID principles using passive MVC model, functional interfaces, higher-order functions, factory, and command patterns.</li>
-                    </ul>
-                </li>
-                <li><strong>Qthreads – Cooperative User-Space Thread Library (Course Project):</strong> November 2024, Boston
-                    <ul>
-                        <li>Implemented a user-space thread library in C, similar to POSIX threads, with thread creation, yielding, sleep, mutexes, and condition variables.</li>
-                        <li>Ensured synchronization and prevented race conditions in a cooperative threading model.</li>
-                    </ul>
-                </li>
-                <li><strong>Simple Linux Shell (Course Project):</strong> October 2024, Boston
-                    <ul>
-                        <li>Built a Linux shell in C supporting internal commands and external Linux commands via forking.</li>
-                        <li>Implemented features such as piped commands and I/O redirection.</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:baidyaarunit@gmail.com">baidyaarunit@gmail.com</a> | <a href="mailto:baidya.ar@northeastern.edu">baidya.ar@northeastern.edu</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/arunit-baidya-388295174/" target="_blank">linkedin.com/in/arunit-baidya-388295174/</a></p>
-            <p>GitHub: <a href="https://github.com/AR-UNIT" target="_blank">github.com/AR-UNIT</a></p>
-            <p><a href="resume.pdf" target="_blank" download class="download">Download My Resume</a></p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Arunit Baidya. All rights reserved.</p>
-    </footer>
+<header>
+    <h1>Hello, I'm Arunit Baidya</h1>
+    <p>Aspiring Backend Software Engineer</p>
+    <p>Looking for Internships in Summer 2025 & Fall 2025</p>
+    <p>Graduating from MS CS program in Spring 2026</p>
+</header>
+<nav>
+    <a href="#about">About Me</a>
+    <a href="#academics">Academics</a>
+    <a href="#skills">Skills</a>
+    <a href="#work">Work Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact Me</a>
+</nav>
+<main>
+    <section id="about">
+        <div class="panel">
+            <div class="panel-header">About Me</div>
+            <div class="panel-body">
+                I am currently a student at Northeastern University with a passion for distributed systems and software
+                engineering. I bring professional experience from my time as a Software Engineer at Arcesium, where I
+                optimized workflows by up to 40% and reduced compute resource usage significantly. I am excited to
+                leverage my technical expertise in backend engineering roles.
+                My graduate studies focus on distributed software systems implementation, with a keen interest in
+                concurrency, parallelism, and distributed design patterns. I am driven by a commitment to solving
+                complex challenges and making impactful contributions through technology.
+            </div>
+        </div>
+    </section>
+    <section id="academics">
+        <h2>Academics</h2>
+        <div class="skills-container">
+            <div class="skill-box">
+                <h3><strong>Northeastern University</strong></h3>
+                <p><strong>Master of Science in Computer Science</strong></p>
+                <p>Sept 2024 - May 2026</p>
+            </div>
+            <div class="skill-box">
+                <h3>PSG College of Technology</h3>
+                <p><strong>Bachelor of Engineering in Computer Science and Engineering</strong></p>
+                <p>Aug 2018 - Jul 2022</p>
+            </div>
+        </div>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-box">
+                <h3>Low-Level Development</h3>
+                <p>GDB, Valgrind</p>
+            </div>
+            <div class="skill-box">
+                <h3>Data Engineering</h3>
+                <p>SQL, Spark, Delta Lake, Data Modeling</p>
+            </div>
+            <div class="skill-box">
+                <h3>Programming Languages & Backend</h3>
+                <p>Python, Java, Scala, C, C++, Go, API Development</p>
+            </div>
+            <div class="skill-box">
+                <h3>Orchestration & Dev Tools</h3>
+                <p>Kubernetes, Argo Workflow, Docker, AWS S3, AWS SNS, AWS SQS, Git</p>
+            </div>
+            <div class="skill-box">
+                <h3>Software Engineering</h3>
+                <p>Continuous Integration & Deployment, Agile Development, Test Driven Development, Code Reviews</p>
+            </div>
+            <div class="skill-box">
+                <h3>Collaboration</h3>
+                <p>Excellent communication skills, cross-functional collaboration, context-driven and domain knowledge
+                    interest</p>
+            </div>
+        </div>
+    </section>
+    <section id="work">
+        <h2>Work Experience</h2>
+        <div class="panel">
+            <div class="panel-header">Arcesium</div>
+            <div class="panel-body">
+                <ul>
+                    <li>Software Engineer (July 2022 to July 2024)</li>
+                    <li>Software Engineering Intern (February 2022 - June 2022)</li>
+                    <li>Software Engineering Intern (May 2021 - July 2021)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="panel">
+            <div class="panel-header">Image Processing Application</div>
+            <div class="panel-body">
+                <strong>Course Project - October 2024 – November 2024, Boston</strong><br>
+                Developed an image processing application in Java that accepts terminal or script file commands to
+                perform image transformations. Applied SOLID principles using passive MVC model, functional interfaces,
+                higher-order functions, factory, and command patterns.
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panel-header">Qthreads – Cooperative User-Space Thread Library</div>
+            <div class="panel-body">
+                <strong>Course Project - November 2024, Boston</strong><br>
+                Implemented a user-space thread library in C, similar to POSIX threads, with thread creation, yielding,
+                sleep, mutexes, and condition variables. Ensured synchronization and prevented race conditions in a
+                cooperative threading model.
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panel-header">Simple Linux Shell</div>
+            <div class="panel-body">
+                <strong>Course Project - October 2024, Boston</strong><br>
+                Built a Linux shell in C supporting internal commands and external Linux commands via forking.
+                Implemented features such as piped commands and I/O redirection.
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="skills-container">
+            <div class="contact-box">
+                <div class="social-links">
+                    <i class="fa fa-envelope"></i><a href="mailto:baidyaarunit@gmail.com">baidyaarunit@gmail.com</a>
+                </div>
+                <div class="social-links">
+                    <i class="fa fa-envelope"></i><a href="mailto:baidya.ar@northeastern.edu">baidya.ar@northeastern.edu</a>
+                </div>
+                <div class="social-links">
+                    <i class="fa fa-phone"></i><a href="tel:+16179355115">+1 (617) 935-5115</a>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/arunit-baidya-388295174/" target="_blank">
+                        <i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/arunit-baidya-388295174/">LinkedIn</a>
+                    </a>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://github.com/AR-UNIT" target="https://github.com/AR-UNIT">
+                        <i class="fab fa-github"></i><a href="https://github.com/AR-UNIT">Github</a>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2024 Arunit Baidya. All rights reserved.</p>
+</footer>
 </body>
 </html>
