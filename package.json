@@ -1,5 +1,5 @@
 {
-  "homepage": "https://ar-unit.github.io/about-me-website",
+  "homepage": "https://ar-unit.github.io/about-me-website/",
   "dependencies": {
     "react-router-dom": "^7.1.1",
     "react-scripts": "^5.0.1"
