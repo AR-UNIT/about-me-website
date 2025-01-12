@@ -3,7 +3,7 @@ name: Deploy React app to GitHub Pages
 on:
   push:
     branches:
-      - main  # or your default branch
+      - main  # Trigger workflow on pushes to the main branch
 
 jobs:
   deploy:
@@ -15,7 +15,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14'  # Adjust based on your React app's requirements
+        node-version: '14'  # Use a Node.js version compatible with your React app
 
     - name: Install dependencies
       run: npm install
@@ -26,5 +26,5 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        branch: gh-pages
-        folder: build
+        branch: main  # Deploy to the 'main' branch
+        folder: build  # Specify the folder to deploy (React build output)
