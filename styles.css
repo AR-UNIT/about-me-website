@@ -54,6 +54,11 @@ section {
     margin-bottom: 2rem;
 }
 
+html {
+    scroll-behavior: smooth; /* Optional for smooth scrolling */
+}
+
+
 h2 {
     color: #333;
     font-size: 1.8rem;
