@@ -103,8 +103,9 @@
                 <a>| (Golang, Kafka, Redis, Docker, Ansible)</a>
             </div>
             <div class="panel-body">
-<!--                <strong>Personal Project, December 2024</strong><br>-->
-                Designed REST API for TODO-List application using PostgreSQL & PostgresDB, with design extensible to new data
+                <!--                <strong>Personal Project, December 2024</strong><br>-->
+                Designed REST API for TODO-List application using PostgreSQL & PostgresDB, with design extensible to new
+                data
                 storage methods & query strategies, and Ansible setup for automated deployments via GitHub CI/CD
                 pipeline runner.
                 Deployed application using Docker & Kubernetes, with JWT authentication, rate limiting, Kafka for event
@@ -119,7 +120,7 @@
                 <a>| (Java, SOLID, MVC)</a>
             </div>
             <div class="panel-body">
-<!--                <strong>Course Project - October 2024 – November 2024, Boston</strong><br>-->
+                <!--                <strong>Course Project - October 2024 – November 2024, Boston</strong><br>-->
                 Developed an image processing application in Java supporting CLI, script, and GUI inputs, demonstrating
                 SOLID principles, higher order functions, object-oriented design, MVC, design patterns, and test-driven
                 development.
@@ -132,10 +133,9 @@
                 <a>| (C, GDB, Multithreaded Programming)</a>
             </div>
             <div class="panel-body">
-<!--                <strong>Course Project - November 2024, Boston</strong><br>-->
-                A user-space thread library in C implementing thread management operations (create, yielxd threads,
-                sleep) and concurrency management constructs (mutexes & condition variables) in a cooperative threading
-                model.
+                Engineered A user-space thread library in C implementing thread management operations (create, yield,
+                join, sleep) and concurrency management constructs (mutex, condition variable) in a cooperative
+                threading model.
             </div>
         </div>
         <div class="panel">
@@ -145,8 +145,7 @@
                 <a>| (C, GDB)</a>
             </div>
             <div class="panel-body">
-<!--                <strong>Course Project - October 2024, Boston</strong><br>-->
-                A C-based Linux shell with command execution for internal & external commands, piping, & I/O
+                Built Linux shell in C with command execution for internal & external commands, piping, & I/O
                 redirection using fork.
             </div>
         </div>
@@ -181,21 +180,21 @@
         </div>
     </section>
     <script>
-    document.querySelectorAll('nav a').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
 
-            const targetId = this.getAttribute('href').substring(1); // Get the target section id
-            const targetElement = document.getElementById(targetId);
+                const targetId = this.getAttribute('href').substring(1); // Get the target section id
+                const targetElement = document.getElementById(targetId);
 
-            // Adjust the scroll position by offset (height of navbar, in this case ~4rem or 60px)
-            window.scrollTo({
-                top: targetElement.offsetTop - document.querySelector('nav').offsetHeight,
-                behavior: 'smooth'
+                // Adjust the scroll position by offset (height of navbar, in this case ~4rem or 60px)
+                window.scrollTo({
+                    top: targetElement.offsetTop - document.querySelector('nav').offsetHeight,
+                    behavior: 'smooth'
+                });
             });
         });
-    });
-</script>
+    </script>
 
 </main>
 <footer>
