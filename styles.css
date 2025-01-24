@@ -80,8 +80,28 @@ h2 {
     padding: 1.5rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
+    flex: 1 1 calc((100% / 2) - 2rem);
+    max-width: calc((100% / 2) - 2rem);
+    box-sizing: border-box;
+    min-width: 284px;
+}
+
+.academics-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.academics-box {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
     flex: 1 1 calc((100% / 3) - 2rem);
-    max-width: calc((100% / 3) - 2rem);
+    max-width: calc((100% / 2) - 2rem);
     box-sizing: border-box;
     min-width: 284px;
 }
@@ -99,12 +119,18 @@ h2 {
     min-width: 350px;
 }
 
-.skill-box:hover, .contact-box:hover {
+.skill-box:hover, .contact-box:hover, .academics-box:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .skill-box h3 {
+    color: #4CAF50;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.academics-box h3 {
     color: #4CAF50;
     font-size: 1.3rem;
     margin-bottom: 1rem;
@@ -170,6 +196,30 @@ a.download:hover {
     background-color: #4CAF50;
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+a.text_box {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    background-color: #ffffff;
+    color: #00b20c;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 2px solid #00b20c;
+    transition: background-color 0.3s, border-color 0.3s;
+    margin-bottom: 0.3rem; /* Adds spacing below each button */
+}
+
+
+
+a.text_box:hover {
+    background-color: #2E7D32; /* A darker shade of green for better contrast */
+    color: #FFFFFF;           /* White text for contrast */
+    /*transform: translateY(-5px);*/
+    /*box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);*/
 }
 
 .social-links {
