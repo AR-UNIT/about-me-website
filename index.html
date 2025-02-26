@@ -62,12 +62,10 @@
         <div class="skills-container">
             <div class="skill-box">
                 <h3>Programming Languages</h3>
-<!--                <p>Python, Java, Go, C, C++, JavaScript, React, HTML, CSS</p>-->
                 <a class="text_box">Python</a>
                 <a class="text_box">Java</a>
                 <a class="text_box">Golang</a>
                 <a class="text_box">C</a>
-                <a class="text_box">C++</a>
                 <a class="text_box">JavaScript</a>
                 <a class="text_box">HTML</a>
                 <a class="text_box">CSS</a>
@@ -85,11 +83,11 @@
                 <a class="text_box">Ansible</a>
                 <a class="text_box">Prometheus</a>
                 <a class="text_box">Grafana</a>
-<!--                <p>Spark, REST, Kafka, Swing, Pytest, Junit, AirFlow, Ansible, Prometheus, Grafana</p>-->
+                <!--                <p>Spark, REST, Kafka, Swing, Pytest, Junit, AirFlow, Ansible, Prometheus, Grafana</p>-->
             </div>
             <div class="skill-box">
                 <h3>Databases</h3>
-<!--                <p>PostgresDB, SQL, relational databases, NoSQL, Redis</p>-->
+                <!--                <p>PostgresDB, SQL, relational databases, NoSQL, Redis</p>-->
                 <a class="text_box">PostgresDB</a>
                 <a class="text_box">SQL</a>
                 <a class="text_box">NoSQL</a>
@@ -102,7 +100,7 @@
             </div>
             <div class="skill-box">
                 <h3>Cloud and DevOps</h3>
-<!--                <p>API Development, AWS, OpenSearch, Docker, Kubernetes, Web Services</p>-->
+                <!--                <p>API Development, AWS, OpenSearch, Docker, Kubernetes, Web Services</p>-->
                 <a class="text_box">API</a>
                 <a class="text_box">Middleware</a>
                 <a class="text_box">AWS</a>
@@ -114,8 +112,8 @@
             </div>
             <div class="skill-box">
                 <h3>Software Development</h3>
-<!--                <p>CI/CD, Agile Development, Test Driven Development, Code Reviews, SOLID, Problem Solving,-->
-<!--                    System Design</p>-->
+                <!--                <p>CI/CD, Agile Development, Test Driven Development, Code Reviews, SOLID, Problem Solving,-->
+                <!--                    System Design</p>-->
                 <a class="text_box">CI/CD</a>
                 <a class="text_box">Agile Development</a>
                 <a class="text_box">SOLID</a>
@@ -143,17 +141,17 @@
                     <a class="text_box">Code Optimization</a>
                     <a class="text_box">DevOps and CI/CD Automation</a>
                     <a class="text_box">Database Management</a>
-                    <a class = "text_box"> Query Design</a>
+                    <a class="text_box"> Query Design</a>
                     <a class="text_box">Technical Documentation</a>
                     <a class="text_box">Cross-functional Collaboration</a>
-<!--                    <p>Data, Backend, Cloud-native</p>-->
+                    <!--                    <p>Data, Backend, Cloud-native</p>-->
                     <h4>ROLES</h4>
                     <a class="text_box">Software Engineer (July 2022 to July 2024)</a>
                     <a class="text_box">Software Engineering Intern (February 2022 - June 2022)</a>
                     <a class="text_box">Software Engineering Intern (May 2021 - July 2021)</a>
-<!--                    <p>Software Engineer (July 2022 to July 2024)</p>-->
-<!--                    <p>Software Engineering Intern (February 2022 - June 2022)</p>-->
-<!--                    <p>Software Engineering Intern (May 2021 - July 2021)</p>-->
+                    <!--                    <p>Software Engineer (July 2022 to July 2024)</p>-->
+                    <!--                    <p>Software Engineering Intern (February 2022 - June 2022)</p>-->
+                    <!--                    <p>Software Engineering Intern (May 2021 - July 2021)</p>-->
                 </ul>
             </div>
         </div>
@@ -161,7 +159,39 @@
     <section id="projects">
         <h2>Projects</h2>
         <div class="panel">
-            <div class="panel-header">Distributed Scalable TODO-List API
+            <div class="panel-header">Scalable Image Sharing Platform
+                <a href="https://github.com/AR-UNIT/GOLA" target=" _blank"
+                   rel="noopener noreferrer"> (GitHub)</a>
+                <a>| (Golang, JavaScript, Kafka, Redis, Postgres, MinIO/S3)</a>
+            </div>
+            <div class="panel-body">
+                <!--                <strong>Personal Project, December 2024</strong><br>-->
+                Architected a high-performance Golang backend with PostgreSQL and MinIO/S3 for reliable storage.
+                Built RESTful APIs for image uploads, likes/dislikes, view tracking, and comments, and ensured
+                scalability & fault tolerance.
+                Deployed application using Docker & Kubernetes, with JWT authentication, rate limiting, Kafka for
+                event-driven architecture, Redis for caching and batch database updates, and Prometheus for metrics
+                collection.
+            </div>
+        </div>
+
+
+        <div class="panel">
+            <div class="panel-header">egOS RISC V Operating System
+                <a href="https://github.com/AR-UNIT/egOS" target=" _blank"
+                   rel="noopener noreferrer"> (GitHub)</a>
+                <a>| (C, Operating Systems, RISC V) </a>
+            </div>
+            <div class="panel-body">
+                <!--                <strong>Personal Project, December 2024</strong><br>-->
+                Enhanced a RISC-V-based operating system (egOS) by implementing user-level threading, a multilevel
+                feedback queue (MLFQ) kernel scheduler, physical memory protection, exception handling, and virtual
+                memory management via paging in C.
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-header">Scalable TODO-List API
                 <a href="https://github.com/AR-UNIT/TODO-LIST" target=" _blank"
                    rel="noopener noreferrer"> (GitHub)</a>
                 <a>| (Golang, Kafka, Redis, Docker, Ansible)</a>
@@ -170,9 +200,7 @@
                 <!--                <strong>Personal Project, December 2024</strong><br>-->
                 Designed REST API for TODO-List application using PostgreSQL & PostgresDB, with design extensible to new
                 data storage methods & query strategies, and Ansible setup for automated deployments via GitHub CI/CD
-                pipeline runner. Deployed application using Docker & Kubernetes, with JWT authentication, rate limiting,
-                Kafka for event driven architecture, Redis for caching and batch database updates, and Prometheus for
-                metrics collection.
+                pipeline runner.
             </div>
         </div>
         <div class="panel">
